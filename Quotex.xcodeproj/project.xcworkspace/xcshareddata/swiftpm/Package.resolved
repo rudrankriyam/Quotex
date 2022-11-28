@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "quotekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rryam/QuoteKit.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "78745870382a326ec136e50e520ad7c7f3209f18"
+      }
+    }
+  ],
+  "version" : 2
+}
