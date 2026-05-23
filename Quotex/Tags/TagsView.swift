@@ -13,16 +13,18 @@ struct TagsView: View {
 
   var body: some View {
     ScrollView {
-      FlowLayout(viewModel.tags) { tag in
-        Button(action: {
-          viewModel.selectTag(for: tag)
-        }, label: {
-          Text(tag.name)
-            .bold()
-            .foregroundColor(.black)
-            .padding()
-            .overlay(RoundedRectangle(cornerRadius: 8).stroke(.gray, lineWidth: 1.5))
-        })
+      NewFlowLayout {
+        ForEach(viewModel.tags) { tag in
+          Button(action: {
+            viewModel.selectTag(for: tag)
+          }, label: {
+            Text(tag.name)
+              .bold()
+              .foregroundColor(.black)
+              .padding()
+              .overlay(RoundedRectangle(cornerRadius: 8).stroke(.gray, lineWidth: 1.5))
+          })
+        }
       }
       .padding()
     }
@@ -57,4 +59,3 @@ struct TagsView_Previews: PreviewProvider {
     TagsView()
   }
 }
-
